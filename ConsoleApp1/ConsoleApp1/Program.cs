@@ -7,6 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Management;
 using System.Diagnostics;
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+
 
 
 namespace ConsoleApp1
@@ -44,19 +48,19 @@ namespace ConsoleApp1
             {
                 Console.Clear();
                 cpu("Win32_VideoController", "Name");
-                //cpu("Win32_BaceBoard", "Product");
                 qusn();
             }
 
             else if (num == 3)
             {
                 Console.Clear();
-                cpu("Win32_PhysicalMemory ", "Name");
+                cpu("Win32_InstalledPhysicalMemory", "Name"); 
                 qusn();
             }
 
-            else if (num == 3)
+            else if (num == 4)
             {
+                Console.Clear();
 
 
                 qusn();
@@ -65,15 +69,12 @@ namespace ConsoleApp1
             else if (num == 5)
             {
                 Console.Clear();
-
                 Console.WriteLine(" Are you sure about the exit?   Y=Yes    N=NO ");
-
                 var info = Console.ReadKey();
                 if (info.Key == ConsoleKey.Y)
                 {
                     Environment.Exit(0);
                 }
-
                 else if (info.Key == ConsoleKey.N)
                 {
                     var fileName = Assembly.GetExecutingAssembly().Location;
@@ -85,14 +86,13 @@ namespace ConsoleApp1
             else
             {
                 Console.Clear();
-
-                Console.WriteLine("The entered number is not available in the list!");
+                Console.WriteLine("not available in the list!");
                 qusn();
             }
 
             void qusn()
             {
-                Console.WriteLine("\r\nPress the 'B' key to return to the main menu and the 'E' key to exit.");
+                Console.WriteLine("\nPress the 'S' key to the (Save),'B' key to return to the main (menu) and the 'E' key to (exit).");
                 var info = Console.ReadKey();
                 if (info.Key == ConsoleKey.B)
                 {
@@ -104,10 +104,19 @@ namespace ConsoleApp1
                 {
                     Environment.Exit(0);
                 }
-
+                else if (info.Key == ConsoleKey.S)
+                {
+                    xlsx xlsx = new xlsx();
+                    xlsx.main();    
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("not available in the list!");
+                    qusn();
+                }
             }
         }
-
         private static void cpu(string hwclass, string syntex)
         {
             ManagementObjectSearcher mos = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM " + hwclass);
