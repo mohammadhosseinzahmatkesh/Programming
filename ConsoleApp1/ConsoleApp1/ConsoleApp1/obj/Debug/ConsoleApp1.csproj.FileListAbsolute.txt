@@ -19,3 +19,16 @@ D:\Git Hob\SystemInformation\ConsoleApp1\ConsoleApp1\bin\Debug\DocumentFormat.Op
 D:\Git Hob\SystemInformation\ConsoleApp1\ConsoleApp1\bin\Debug\DocumentFormat.OpenXml.xml
 D:\Git Hob\SystemInformation\ConsoleApp1\ConsoleApp1\bin\Debug\DocumentFormat.OpenXml.Framework.xml
 D:\Git Hob\SystemInformation\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\Git Hub\SystemInformation\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
