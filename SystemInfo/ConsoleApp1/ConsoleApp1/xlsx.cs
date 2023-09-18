@@ -18,17 +18,23 @@ namespace ConsoleApp1
     {
         public void excel()
         {
-            Spreadsheet document = new Spreadsheet();
-            Worksheet sheet = document.Workbook.Worksheets.Add("writExcelDemo");
-            sheet.Cell("A1").Value = "bbb";
-            sheet.Cell("B1").Value = "aaa";
-            if (File.Exists(System.Environment.CurrentDirectory + "-" + "SystemInfo.xlsx"))
+            try
             {
-                File.Delete(System.Environment.CurrentDirectory + "-" + "SystemInfo.xlsx");
+                Spreadsheet document = new Spreadsheet();
+                Worksheet sheet = document.Workbook.Worksheets.Add("writExcelDemo");
+                sheet.Cell("A1").Value = "bbb";
+                sheet.Cell("B1").Value = "aaa";
+                if (File.Exists(System.Environment.CurrentDirectory + "-" + "SystemInfo.xlsx"))
+                {
+                    File.Delete(System.Environment.CurrentDirectory + "-" + "SystemInfo.xlsx");
+                }
+                document.SaveAs(System.Environment.CurrentDirectory + "-" + "SystemInfo.xlsx");
+                document.Close();
             }
-            document.SaveAs(System.Environment.CurrentDirectory + "-" + "SystemInfo.xlsx");
-            document.Close();
-
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

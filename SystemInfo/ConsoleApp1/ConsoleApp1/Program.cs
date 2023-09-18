@@ -34,162 +34,137 @@ namespace ConsoleApp1
                              "\n *                                                                                                                   *" +
                              "\n * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" );
 
-
-
-            int num = int.Parse(Console.ReadLine());
             
+            
+            Question Q = new Question();
+            //
+            SystemInfo Info = new SystemInfo();
 
-            if (num == 1)
+            try
             {
-                Console.Clear();
-                
-                Console.Write("Model:" + "               "              );
-                SystemInfo("Win32_ComputerSystem",        "Model"       );
-                // 
-                Console.Write("Pc Name:" + "             "              );
-                SystemInfo("Win32_ComputerSystem",         "Name"       );
-                //
-                Console.Write("Manufacturer:" + "        "              );
-                SystemInfo("Win32_ComputerSystem", "Manufacturer"       );
-                
-                Q();
-            }
-
-
-
-            if (num == 2)
-            {
-                Console.Clear();
-
-                Console.Write("Model:" + "            "                 );
-                SystemInfo("Win32_Processor" ,          "Name"          );
-                //
-                Console.Write("cores:" + "            "                 );
-                SystemInfo("Win32_Processor" , "NumberOfCores"          );
-                //
-                Console.Write("logical:" + "          "                 );
-                SystemInfo("Win32_Processor" , "NumberOfCores"          );
-                //
-                Console.Write("speed:" + "            "                 );
-                SystemInfo("Win32_Processor", "MaxClockSpeed"           );
-
-                Q();
-            }
-
-
-
-            else if (num == 3)
-            {
-                Console.Clear();
-
-                Console.Write("Model:" + "     ");
-                SystemInfo("Win32_VideoController", "Name"              );
-                Q();
-            }
-
-
-
-            else if (num == 4)
-            {
-                Console.Clear();
-                Console.Write("TotalPhysicalMemory:" + "       "        );
-                SystemInfo("Win32_ComputerSystem", "TotalPhysicalMemory");
-                //
-                Console.Write("\nNumberOfProcessors:" + "        "      );
-                SystemInfo("Win32_ComputerSystem", "NumberOfProcessors" );
-                //
-                Console.Write("\nCapacity:" + "     " + "\n"            );
-                SystemInfo("Win32_PhysicalMemory", "Capacity"           );
-                //
-                Console.Write("\nMemoryType:" + "     " + "\n"          );
-                SystemInfo("Win32_PhysicalMemory", "MemoryType"         );
-                //
-                Console.Write("\nSpeed:" + "     " + "\n"               );
-                SystemInfo("Win32_PhysicalMemory", "Speed"              );
-                Q();
-            }
-
-
-
-            else if (num == 5)
-            {
-                Console.Clear();
-
-                Console.Write("Name:\n"                                 );
-                SystemInfo("Win32_DiskDrive", "Name"                    );
-                //
-                Console.Write("\nModel:\n"                              );
-                SystemInfo("Win32_DiskDrive", "Caption"                 );
-                //
-                Console.Write("\nSize:\n"                               );
-                SystemInfo("Win32_DiskDrive" , "BytesPerSector"         ); 
- 
-                Q();
-            }
-
-
-
-            else if (num == 6)
-            {
-                Console.Clear();
-                Console.WriteLine(" Are you sure about the exit?   Y=Yes    N=NO ");
-                var info = Console.ReadKey();
-                if (info.Key == ConsoleKey.Y)
+                int num = int.Parse(Console.ReadLine());
+                if (num == 1)
                 {
-                    Environment.Exit(0);
+                    Console.Clear();
+
+                    Console.Write("Model:" + "               ");
+                    Info.main("Win32_ComputerSystem", "Model");
+                    // 
+                    Console.Write("Pc Name:" + "             ");
+                    Info.main("Win32_ComputerSystem", "Name");
+                    //
+                    Console.Write("Manufacturer:" + "        ");
+                    Info.main("Win32_ComputerSystem", "Manufacturer");
+
+                    Q.main();
                 }
-                else if (info.Key == ConsoleKey.N)
+
+
+
+                if (num == 2)
                 {
-                    var fileName = Assembly.GetExecutingAssembly().Location;
-                    System.Diagnostics.Process.Start(fileName);
-                    Environment.Exit(0);
+                    Console.Clear();
+
+                    Console.Write("Model:" + "            ");
+                    Info.main("Win32_Processor", "Name");
+                    //
+                    Console.Write("cores:" + "            ");
+                    Info.main("Win32_Processor", "NumberOfCores");
+                    //
+                    Console.Write("logical:" + "          ");
+                    Info.main("Win32_Processor", "NumberOfCores");
+                    //
+                    Console.Write("Frequency:" + "            ");
+                    Info.main("Win32_Processor", "MaxClockSpeed");
+
+                    Q.main();
                 }
-            }
 
 
 
-            else
-            {
-                Console.Clear();
-                Console.WriteLine("not available in the list!");
-                Q();
-            }
-
-
-
-            void Q()
-            {
-                Console.WriteLine("\nPress the 'S' key to the (Save),'B' key to return to the main (Menu) and the 'E' key to (Exit).");
-                var info = Console.ReadKey();
-                if (info.Key == ConsoleKey.B)
+                else if (num == 3)
                 {
-                    var fileName = Assembly.GetExecutingAssembly().Location;
-                    System.Diagnostics.Process.Start(fileName);
-                    Environment.Exit(0);
+                    Console.Clear();
+
+                    Console.Write("Model:" + "     ");
+                    Info.main("Win32_VideoController", "Name");
+
+                    Q.main();
                 }
-                else if (info.Key == ConsoleKey.E)
+
+
+
+                else if (num == 4)
                 {
-                    Environment.Exit(0);
+                    Console.Clear();
+                    Console.Write("TotalPhysicalMemory:" + "       ");
+                    Info.main("Win32_ComputerSystem", "TotalPhysicalMemory");
+                    //
+                    Console.Write("\nNumberOfProcessors:" + "        ");
+                    Info.main("Win32_ComputerSystem", "NumberOfProcessors");
+                    //
+                    Console.Write("\nCapacity:" + "     " + "\n");
+                    Info.main("Win32_PhysicalMemory", "Capacity");
+                    //
+                    Console.Write("\nMemoryType:" + "     " + "\n");
+                    Info.main("Win32_PhysicalMemory", "MemoryType");
+                    //
+                    Console.Write("\nFrequency:" + "     " + "\n");
+                    Info.main("Win32_PhysicalMemory", "Speed");
+
+                    Q.main();
                 }
-                else if (info.Key == ConsoleKey.S)
+
+
+
+                else if (num == 5)
                 {
-                    xlsx xlsx = new xlsx();
-                    xlsx.excel();    
+                    Console.Clear();
+
+                    Console.Write("Name:\n");
+                    Info.main("Win32_DiskDrive", "Name");
+                    //
+                    Console.Write("\nModel:\n");
+                    Info.main("Win32_DiskDrive", "Caption");
+                    //
+                    Console.Write("\nSize:\n");
+                    Info.main("Win32_DiskDrive", "BytesPerSector");
+
+                    Q.main();
                 }
+
+
+
+                else if (num == 6)
+                {
+                    Console.Clear();
+                    Console.WriteLine(" Are you sure about the exit?   Y=Yes    N=NO ");
+                    var info = Console.ReadKey();
+                    if (info.Key == ConsoleKey.Y)
+                    {
+                        Environment.Exit(0);
+                    }
+                    else if (info.Key == ConsoleKey.N)
+                    {
+                        var fileName = Assembly.GetExecutingAssembly().Location;
+                        System.Diagnostics.Process.Start(fileName);
+                        Environment.Exit(0);
+                    }
+                }
+
                 else
                 {
                     Console.Clear();
                     Console.WriteLine("not available in the list!");
-                    Q();
+                    Q.main();
                 }
             }
-        }
-        private static void SystemInfo(string hwclass, string syntex)
-        {
-            ManagementObjectSearcher mos = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM " + hwclass);
-            foreach (ManagementObject mj in mos.Get())
+
+            catch (Exception ex)
             {
-                Console.WriteLine(Convert.ToString(mj[syntex]));
+                Console.Clear();
+                Console.WriteLine("not available in the list!");
+                Q.main();
             }
         }
     }
