@@ -14,16 +14,19 @@ using Bytescout.Spreadsheet;
 
 namespace ConsoleApp1
 {
-    class xlsx
-    {
-        public void excel()
+     public class xlsx
+    {   
+        public void excel(string A1, string B1, string C1, string D1, string E1)
         {
             try
             {
                 Spreadsheet document = new Spreadsheet();
                 Worksheet sheet = document.Workbook.Worksheets.Add("writExcelDemo");
-                sheet.Cell("A1").Value = "bbb";
-                sheet.Cell("B1").Value = "aaa";
+                sheet.Cell("A1").Value = A1;
+                sheet.Cell("B1").Value = B1;
+                sheet.Cell("C1").Value = C1;
+                sheet.Cell("D1").Value = D1;
+                sheet.Cell("E1").Value = E1;
                 if (File.Exists(System.Environment.CurrentDirectory + "-" + "SystemInfo.xlsx"))
                 {
                     File.Delete(System.Environment.CurrentDirectory + "-" + "SystemInfo.xlsx");

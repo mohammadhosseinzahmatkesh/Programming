@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class SystemInfo
+    public class SystemInfo
     {
-        public void main(string hwclass, string syntex)
+        public string main(string hwclass, string syntex)
         {
+            string A = string.Empty;
             try
             {
                 ManagementObjectSearcher mos = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM " + hwclass);
                 foreach (ManagementObject mj in mos.Get())
                 {
+                    A = Convert.ToString(mj[syntex]);
                     Console.WriteLine(Convert.ToString(mj[syntex]));
                 }
             }
@@ -24,6 +26,7 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(ex.Message);
             }
+            return A;
         }
     }
 }
