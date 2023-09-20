@@ -27,11 +27,11 @@ namespace ConsoleApp1
                 sheet.Cell("C1").Value = C1;
                 sheet.Cell("D1").Value = D1;
                 sheet.Cell("E1").Value = E1;
-                if (File.Exists(System.Environment.CurrentDirectory + "-" + "SystemInfo.xlsx"))
+                if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"/" + "SystemInfo.xlsx"))
                 {
-                    File.Delete(System.Environment.CurrentDirectory + "-" + "SystemInfo.xlsx");
+                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"/" + "SystemInfo.xlsx");
                 }
-                document.SaveAs(System.Environment.CurrentDirectory + "-" + "SystemInfo.xlsx");
+                document.SaveAs(AppDomain.CurrentDomain.BaseDirectory + @"/" + "SystemInfo.xlsx");
                 document.Close();
             }
             catch (Exception ex)

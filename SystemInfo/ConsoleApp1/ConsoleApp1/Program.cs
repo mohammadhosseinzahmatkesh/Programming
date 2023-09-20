@@ -47,78 +47,50 @@ namespace ConsoleApp1
             string D2;
             string E2;
             //
+
             try
             {
                 int num = int.Parse(Console.ReadLine());
+
                 if (num == 1)
                 {
                     Console.Clear();
 
-                    Console.Write("Model:" + "               "           );
-                    A2 = Info.main("Win32_ComputerSystem", "Model"       );
+                    Console.Write("Model:" + "               ");
+                    A2 = Info.main("Win32_ComputerSystem", "Model");
                     //  
-                    Console.Write("Pc Name:" + "             "           );
-                    B2 = Info.main("Win32_ComputerSystem", "Name"        );
+                    Console.Write("Pc Name:" + "             ");
+                    B2 = Info.main("Win32_ComputerSystem", "Name");
                     //
-                    Console.Write("Manufacturer:" + "        "           );
+                    Console.Write("Manufacturer:" + "        ");
                     C2 = Info.main("Win32_ComputerSystem", "Manufacturer");
                     //
                     D2 = "";
                     //
                     E2 = "";
-                    //
-                    Console.WriteLine("\nDo you want to save the file in Excel?");
-                    var S = Console.ReadKey();
-                    if (S.Key == ConsoleKey.Y)
-                    {
-                        xlsx save = new xlsx();
-                        save.excel(A2, B2, C2, D2, E2);
-                    }
-                    else if (S.Key == ConsoleKey.N)
-                    {
-                        Q();
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nnot available in the list!");
-                        Q();
-                    }
+
+                    S();
                 }
 
                 if (num == 2)
                 {
                     Console.Clear();
 
-                    Console.Write("Model:" + "            "          );
-                    A2 = Info.main("Win32_Processor", "Name"         );
+                    Console.Write("Model:" + "            ");
+                    A2 = Info.main("Win32_Processor", "Name");
                     //
-                    Console.Write("cores:" + "            "          );
+                    Console.Write("cores:" + "            ");
                     B2 = Info.main("Win32_Processor", "NumberOfCores");
                     //
-                    Console.Write("logical:" + "          "          );
+                    Console.Write("logical:" + "          ");
                     C2 = Info.main("Win32_Processor", "NumberOfCores");
                     //
-                    Console.Write("Frequency:" + "        "          );
+                    Console.Write("Frequency:" + "        ");
                     D2 = Info.main("Win32_Processor", "MaxClockSpeed");
                     //
                     E2 = "";
-                    //
-                    Console.WriteLine("\nDo you want to save the file in Excel?");
-                    var S = Console.ReadKey();
-                    if (S.Key == ConsoleKey.Y)
-                    {
-                        xlsx save = new xlsx();
-                        save.excel(A2, B2, C2, D2, E2);
-                    }
-                    else if (S.Key == ConsoleKey.N)
-                    {
-                        Q();
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nnot available in the list!");
-                        Q();
-                    }
+
+                    S();
                 }
 
 
@@ -137,23 +109,8 @@ namespace ConsoleApp1
                     D2 = "";
                     //
                     E2 = "";
-                    //
-                    Console.WriteLine("\nDo you want to save the file in Excel?");
-                    var S = Console.ReadKey();
-                    if (S.Key == ConsoleKey.Y)
-                    {
-                        xlsx save = new xlsx();
-                        save.excel(A2, B2, C2, D2, E2);
-                    }
-                    else if (S.Key == ConsoleKey.N)
-                    {
-                        Q();
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nnot available in the list!");
-                        Q();
-                    }
+
+                    S();
                 }
 
 
@@ -161,37 +118,22 @@ namespace ConsoleApp1
                 else if (num == 4)
                 {
                     Console.Clear();
-                    Console.Write("TotalPhysicalMemory:" + "       "            );
-                    A2 =Info.main("Win32_ComputerSystem", "TotalPhysicalMemory" );
+                    Console.Write("TotalPhysicalMemory:" + "       ");
+                    A2 = Info.main("Win32_ComputerSystem", "TotalPhysicalMemory");
                     //
-                    Console.Write("\nNumberOfProcessors:" + "        "          );
-                    B2 = Info.main("Win32_ComputerSystem", "NumberOfProcessors" );
+                    Console.Write("\nNumberOfProcessors:" + "        ");
+                    B2 = Info.main("Win32_ComputerSystem", "NumberOfProcessors");
                     //
-                    Console.Write("\nCapacity:" + "     " + "\n"                );
-                    C2 = Info.main("Win32_PhysicalMemory", "Capacity"           );
+                    Console.Write("\nCapacity:" + "     " + "\n");
+                    C2 = Info.main("Win32_PhysicalMemory", "Capacity");
                     //
-                    Console.Write("\nMemoryType:" + "     " + "\n"              );
-                    D2 = Info.main("Win32_PhysicalMemory", "MemoryType"         );
+                    Console.Write("\nMemoryType:" + "     " + "\n");
+                    D2 = Info.main("Win32_PhysicalMemory", "MemoryType");
                     //
-                    Console.Write("\nFrequency:" + "     " + "\n"               );
-                    E2 = Info.main("Win32_PhysicalMemory", "Speed"              );
-                    //
-                    Console.WriteLine("\nDo you want to save the file in Excel?");
-                    var S = Console.ReadKey();
-                    if (S.Key == ConsoleKey.Y)
-                    {
-                        xlsx save = new xlsx();
-                        save.excel(A2, B2, C2, D2, E2);
-                    }
-                    else if (S.Key == ConsoleKey.N)
-                    {
-                        Q();
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nnot available in the list!");
-                        Q();
-                    }
+                    Console.Write("\nFrequency:" + "     " + "\n");
+                    E2 = Info.main("Win32_PhysicalMemory", "Speed");
+
+                    S();
                 }
 
 
@@ -200,35 +142,20 @@ namespace ConsoleApp1
                 {
                     Console.Clear();
 
-                    Console.Write("Name:\n"                                    );
-                    A2 = Info.main("Win32_DiskDrive", "Name"                   );
+                    Console.Write("Name:\n");
+                    A2 = Info.main("Win32_DiskDrive", "Name");
                     //
-                    Console.Write("\nModel:\n"                                 );
-                    B2 = Info.main("Win32_DiskDrive", "Caption"                );
+                    Console.Write("\nModel:\n");
+                    B2 = Info.main("Win32_DiskDrive", "Caption");
                     //
-                    Console.Write("\nSize:\n"                                  );
-                    C2 = Info.main("Win32_DiskDrive", "BytesPerSector"         );
+                    Console.Write("\nSize:\n");
+                    C2 = Info.main("Win32_DiskDrive", "BytesPerSector");
                     //
                     D2 = "";
                     //
                     E2 = "";
-                    //
-                    Console.WriteLine("\nDo you want to save the file in Excel?");
-                    var S = Console.ReadKey();
-                    if (S.Key == ConsoleKey.Y)
-                    {
-                        xlsx save = new xlsx();
-                        save.excel(A2, B2, C2, D2, E2);
-                    }
-                    else if (S.Key == ConsoleKey.N)
-                    {
-                        Q();
-                    }
-                    else
-                    {
-                        Console.WriteLine("\nnot available in the list!");
-                        Q();
-                    }
+
+                    S();
                 }
 
 
@@ -250,6 +177,8 @@ namespace ConsoleApp1
                     }
                 }
 
+
+
                 else
                 {
                     Console.Clear();
@@ -265,6 +194,7 @@ namespace ConsoleApp1
                 Console.WriteLine("not available in the list!");
             }
 
+
             void Q()
             {
                 try
@@ -277,10 +207,16 @@ namespace ConsoleApp1
                         System.Diagnostics.Process.Start(fileName);
                         Environment.Exit(0);
                     }
+
+
+
                     else if (info.Key == ConsoleKey.E)
                     {
                         Environment.Exit(0);
                     }
+
+
+
                     else
                     {
                         Console.Clear();
@@ -293,7 +229,42 @@ namespace ConsoleApp1
                 {
 
                 }
-             
+            }
+
+            void S()
+            {
+                try
+                {
+                    Console.WriteLine("\nDo you want to save the file in Excel?        Y=Yes          N=No  ");
+
+                    var E = Console.ReadKey();
+                    if (E.Key == ConsoleKey.Y)
+                    {
+                        xlsx save = new xlsx();
+                        save.excel(A2, B2, C2, D2, E2);
+
+                        Q();
+                    }
+
+
+
+                    else if (E.Key == ConsoleKey.N)
+                    {
+                        Q();
+                    }
+
+
+
+                    else
+                    {
+                        Console.WriteLine("\nnot available in the list!");
+                        Q();
+                    }
+                }
+                catch
+                {
+
+                }
             }
         }
     }
