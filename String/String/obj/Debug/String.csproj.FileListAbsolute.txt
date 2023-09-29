@@ -1,0 +1,8 @@
+E:\Git Hub\Programming\String\String\bin\Debug\String.exe.config
+E:\Git Hub\Programming\String\String\bin\Debug\String.exe
+E:\Git Hub\Programming\String\String\bin\Debug\String.pdb
+E:\Git Hub\Programming\String\String\obj\Debug\String.csproj.AssemblyReference.cache
+E:\Git Hub\Programming\String\String\obj\Debug\String.csproj.SuggestedBindingRedirects.cache
+E:\Git Hub\Programming\String\String\obj\Debug\String.csproj.CoreCompileInputs.cache
+E:\Git Hub\Programming\String\String\obj\Debug\String.exe
+E:\Git Hub\Programming\String\String\obj\Debug\String.pdb

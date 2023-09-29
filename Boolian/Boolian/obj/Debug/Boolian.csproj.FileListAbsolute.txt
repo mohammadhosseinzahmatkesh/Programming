@@ -1,0 +1,8 @@
+E:\Git Hub\Programming\Boolian\Boolian\bin\Debug\Boolian.exe.config
+E:\Git Hub\Programming\Boolian\Boolian\bin\Debug\Boolian.exe
+E:\Git Hub\Programming\Boolian\Boolian\bin\Debug\Boolian.pdb
+E:\Git Hub\Programming\Boolian\Boolian\obj\Debug\Boolian.csproj.AssemblyReference.cache
+E:\Git Hub\Programming\Boolian\Boolian\obj\Debug\Boolian.csproj.SuggestedBindingRedirects.cache
+E:\Git Hub\Programming\Boolian\Boolian\obj\Debug\Boolian.csproj.CoreCompileInputs.cache
+E:\Git Hub\Programming\Boolian\Boolian\obj\Debug\Boolian.exe
+E:\Git Hub\Programming\Boolian\Boolian\obj\Debug\Boolian.pdb

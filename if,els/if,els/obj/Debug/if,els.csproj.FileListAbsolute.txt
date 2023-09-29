@@ -1,0 +1,8 @@
+E:\Git Hub\Programming\if,els\if,els\obj\Debug\if,els.csproj.AssemblyReference.cache
+E:\Git Hub\Programming\if,els\if,els\obj\Debug\if,els.csproj.SuggestedBindingRedirects.cache
+E:\Git Hub\Programming\if,els\if,els\obj\Debug\if,els.csproj.CoreCompileInputs.cache
+E:\Git Hub\Programming\if,els\if,els\bin\Debug\if,els.exe.config
+E:\Git Hub\Programming\if,els\if,els\bin\Debug\if,els.exe
+E:\Git Hub\Programming\if,els\if,els\bin\Debug\if,els.pdb
+E:\Git Hub\Programming\if,els\if,els\obj\Debug\if,els.exe
+E:\Git Hub\Programming\if,els\if,els\obj\Debug\if,els.pdb
