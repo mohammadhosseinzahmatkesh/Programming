@@ -20,6 +20,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            SystemInfo SystemInfo = new SystemInfo();
+
 
             Console.WriteLine(" * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" +
                              "\n * Please choose the option you want:                                                                                *" +
@@ -27,7 +29,7 @@ namespace ConsoleApp1
                              "\n * 2-CPU)                                                                                                            *" +
                              "\n * 3-GPU)                                                                                                            *" +
                              "\n * 4-RAM)                                                                                                            *" +
-                             "\n * 5-HARD)                                                                                                           *" +
+                             "\n * 5-Hard)                                                                                                           *" +
                              "\n * 6-Exit)                                                                                                           *" +
                              "\n *                                                                                                                   *" +
                              "\n *                                                                                                                   *" +
@@ -35,132 +37,53 @@ namespace ConsoleApp1
                              "\n *                                                                                                                   *" +
                              "\n *                                                                                                                   *" +
                              "\n * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" );
-
-
-
-           
-            SystemInfo Info = new SystemInfo();
-            //
-            string A2;
-            string B2;
-            string C2;
-            string D2;
-            string E2;
-            //
+            
 
             try
             {
-                int num = int.Parse(Console.ReadLine());
+                int number = int.Parse(Console.ReadLine());
 
-                if (num == 1)
+                if (number == 1)
                 {
-                    Console.Clear();
-
-                    Console.Write("Model:" + "               ");
-                    A2 = Info.main("Win32_ComputerSystem", "Model");
-                    //  
-                    Console.Write("Pc Name:" + "             ");
-                    B2 = Info.main("Win32_ComputerSystem", "Name");
-                    //
-                    Console.Write("Manufacturer:" + "        ");
-                    C2 = Info.main("Win32_ComputerSystem", "Manufacturer");
-                    //
-                    D2 = "";
-                    //
-                    E2 = "";
-
-                    S();
-                }
-
-                if (num == 2)
-                {
-                    Console.Clear();
-
-                    Console.Write("Model:" + "            ");
-                    A2 = Info.main("Win32_Processor", "Name");
-                    //
-                    Console.Write("cores:" + "            ");
-                    B2 = Info.main("Win32_Processor", "NumberOfCores");
-                    //
-                    Console.Write("logical:" + "          ");
-                    C2 = Info.main("Win32_Processor", "NumberOfCores");
-                    //
-                    Console.Write("Frequency:" + "        ");
-                    D2 = Info.main("Win32_Processor", "MaxClockSpeed");
-                    //
-                    E2 = "";
-
-                    S();
+                    SystemInfo.System();
+                    Question();
                 }
 
 
 
-                else if (num == 3)
+                else if (number == 2)
                 {
-                    Console.Clear();
-
-                    Console.Write("Model:" + "     ");
-                    A2 = Info.main("Win32_VideoController", "Name");
-                    //
-                    B2 = "";
-                    //
-                    C2 = "";
-                    //
-                    D2 = "";
-                    //
-                    E2 = "";
-
-                    S();
+                    SystemInfo.CPU();
+                    Question();
                 }
 
 
 
-                else if (num == 4)
+                else if (number == 3)
                 {
-                    Console.Clear();
-                    Console.Write("TotalPhysicalMemory:" + "       ");
-                    A2 = Info.main("Win32_ComputerSystem", "TotalPhysicalMemory");
-                    //
-                    Console.Write("\nNumberOfProcessors:" + "        ");
-                    B2 = Info.main("Win32_ComputerSystem", "NumberOfProcessors");
-                    //
-                    Console.Write("\nCapacity:" + "     " + "\n");
-                    C2 = Info.main("Win32_PhysicalMemory", "Capacity");
-                    //
-                    Console.Write("\nMemoryType:" + "     " + "\n");
-                    D2 = Info.main("Win32_PhysicalMemory", "MemoryType");
-                    //
-                    Console.Write("\nFrequency:" + "     " + "\n");
-                    E2 = Info.main("Win32_PhysicalMemory", "Speed");
-
-                    S();
+                    SystemInfo.GPU();
+                    Question();
                 }
 
 
 
-                else if (num == 5)
+                else if (number == 4)
                 {
-                    Console.Clear();
-
-                    Console.Write("Name:\n");
-                    A2 = Info.main("Win32_DiskDrive", "Name");
-                    //
-                    Console.Write("\nModel:\n");
-                    B2 = Info.main("Win32_DiskDrive", "Caption");
-                    //
-                    Console.Write("\nSize:\n");
-                    C2 = Info.main("Win32_DiskDrive", "BytesPerSector");
-                    //
-                    D2 = "";
-                    //
-                    E2 = "";
-
-                    S();
+                    SystemInfo.RAM();
+                    Question();
                 }
 
 
 
-                else if (num == 6)
+                else if (number == 5)
+                {
+                    SystemInfo.Hard();
+                    Question();
+                }
+
+
+
+                else if (number == 6)
                 {
                     Console.Clear();
                     Console.WriteLine(" Are you sure about the exit?   Y=Yes    N=NO ");
@@ -182,85 +105,52 @@ namespace ConsoleApp1
                 else
                 {
                     Console.Clear();
-                    Console.WriteLine("not available in the list!");
+                    Console.WriteLine("not available in the list!\n");
 
-                    Q();
+                    Question();
                 }
             }
 
-            catch (Exception ex)
+            catch (Exception Erorr)
             {
                 Console.Clear();
                 Console.WriteLine("not available in the list!");
             }
 
 
-            void Q()
+           
+
+            void Question()
             {
                 try
                 {
-                    Console.WriteLine("\nPress the 'B' key to return to the main (Menu) and the 'E' key to (Exit).");
-                    var info = Console.ReadKey();
-                    if (info.Key == ConsoleKey.B)
-                    {
-                        var fileName = Assembly.GetExecutingAssembly().Location;
-                        System.Diagnostics.Process.Start(fileName);
-                        Environment.Exit(0);
-                    }
+                     Console.WriteLine("\n\nPress the 'B' key to return to the main (Menu) and the 'E' key to (Exit).");
+                     var info = Console.ReadKey();
+                     if (info.Key == ConsoleKey.B)
+                     {
+                            var fileName = Assembly.GetExecutingAssembly().Location;
+                            System.Diagnostics.Process.Start(fileName);
+                            Environment.Exit(0);
+                     }
 
 
 
-                    else if (info.Key == ConsoleKey.E)
-                    {
-                        Environment.Exit(0);
-                    }
+                     else if (info.Key == ConsoleKey.E)
+                     {
+                            Environment.Exit(0);
+                     }
 
 
 
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("not available in the list!");
-                        Q();
-                    }
+                     else
+                     {
+                            Console.Clear();
+                            Console.WriteLine("not available in the list!");
+
+                            Question();
+                     }
                 }
 
-                catch
-                {
-
-                }
-            }
-
-            void S()
-            {
-                try
-                {
-                    Console.WriteLine("\nDo you want to save the file in Excel?        Y=Yes          N=No  ");
-
-                    var E = Console.ReadKey();
-                    if (E.Key == ConsoleKey.Y)
-                    {
-                        xlsx save = new xlsx();
-                        save.excel(A2, B2, C2, D2, E2);
-
-                        Q();
-                    }
-
-
-
-                    else if (E.Key == ConsoleKey.N)
-                    {
-                        Q();
-                    }
-
-
-
-                    else
-                    {
-                        Console.WriteLine("\nnot available in the list!");
-                        Q();
-                    }
-                }
                 catch
                 {
 
