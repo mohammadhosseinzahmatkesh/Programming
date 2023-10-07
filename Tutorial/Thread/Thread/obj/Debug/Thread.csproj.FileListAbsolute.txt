@@ -1,0 +1,8 @@
+E:\Git Hub\Programming\Tutorial\Thread\Thread\bin\Debug\Thread.exe.config
+E:\Git Hub\Programming\Tutorial\Thread\Thread\bin\Debug\Thread.exe
+E:\Git Hub\Programming\Tutorial\Thread\Thread\bin\Debug\Thread.pdb
+E:\Git Hub\Programming\Tutorial\Thread\Thread\obj\Debug\Thread.csproj.AssemblyReference.cache
+E:\Git Hub\Programming\Tutorial\Thread\Thread\obj\Debug\Thread.csproj.SuggestedBindingRedirects.cache
+E:\Git Hub\Programming\Tutorial\Thread\Thread\obj\Debug\Thread.csproj.CoreCompileInputs.cache
+E:\Git Hub\Programming\Tutorial\Thread\Thread\obj\Debug\Thread.exe
+E:\Git Hub\Programming\Tutorial\Thread\Thread\obj\Debug\Thread.pdb
