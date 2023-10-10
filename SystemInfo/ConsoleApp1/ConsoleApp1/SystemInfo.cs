@@ -1,4 +1,5 @@
-﻿using DocumentFormat.OpenXml.EMMA;
+﻿using ConsoleApp1;
+using DocumentFormat.OpenXml.EMMA;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,45 +13,34 @@ namespace ConsoleApp1
     {
         GetInfo Info = new GetInfo();
         //
-        string A1;
-        string A2;
-        string A3;
-        string A4;
-        string A5;
-        string B1;
-        string B2;
-        string B3;
-        string B4;
-        string B5;
-        //
+        List<string> Xlsx = new List<string>();
+        
         public void System()
         {
             Console.Clear();
 
-            A1 = "Model:";
+            Xlsx.Add("Model:");
             //
-            A2 = "PC Name:";
+            Xlsx.Add("PC Name:");
             //
-            A3 = "Manufacturer:";
+            Xlsx.Add("Manufacturer:");
             //
-            A4 = "";
+            Xlsx.Add("");
             //
-            A5 = "";
+            Xlsx.Add("");
             //
             Console.Write("Model:" + "               ");
-            B1 = (Info.information("Win32_ComputerSystem", "Model"));
+            Xlsx.Add(Info.information("Win32_ComputerSystem", "Model"));
             //  
             Console.Write("PC Name:" + "             ");
-            B2 = (Info.information("Win32_ComputerSystem", "Name"));
+            Xlsx.Add(Info.information("Win32_ComputerSystem", "Name"));
             //
             Console.Write("Manufacturer:" + "        ");
-            B3 = (Info.information("Win32_ComputerSystem", "Manufacturer"));
+            Xlsx.Add(Info.information("Win32_ComputerSystem", "Manufacturer"));
             //
-            B4 = "";
+            Xlsx.Add("");
             //
-            B5 = "";
-
-            Save();
+            Xlsx.Add("");
         }
 
 
@@ -58,31 +48,29 @@ namespace ConsoleApp1
         {
             Console.Clear();
 
-            A1 = "Model:";
+            Xlsx.Add("Model:");
             //
-            A2 = "cores:";
+            Xlsx.Add("cores:");
             //
-            A3 = "logical:";
+            Xlsx.Add("logical:");
             //
-            A4 = "Frequency:";
+            Xlsx.Add("Frequency:");
             //
-            A5 = "";
+            Xlsx.Add("");
             //
             Console.Write("Model:" + "            ");
-            B1 = Info.information("Win32_Processor", "Name");
+            Xlsx.Add(Info.information("Win32_Processor", "Name"));
             //
             Console.Write("cores:" + "            ");
-            B2 = Info.information("Win32_Processor", "NumberOfCores");
+            Xlsx.Add(Info.information("Win32_Processor", "NumberOfCores"));
             //
             Console.Write("logical:" + "          ");
-            B3 = Info.information("Win32_Processor", "NumberOfCores");
+            Xlsx.Add(Info.information("Win32_Processor", "NumberOfCores"));
             //
             Console.Write("Frequency:" + "        ");
-            B4 = Info.information("Win32_Processor", "MaxClockSpeed");
+            Xlsx.Add(Info.information("Win32_Processor", "MaxClockSpeed"));
             //
-            B5 = "";
-
-            Save();
+            Xlsx.Add("");
         }
 
 
@@ -90,28 +78,26 @@ namespace ConsoleApp1
         {
             Console.Clear();
 
-            A1 = "Model:";
+            Xlsx.Add("Model:");
             //
-            A2 = "";
+            Xlsx.Add("");
             //
-            A3 = "";
+            Xlsx.Add("");
             //
-            A4 = "";
+            Xlsx.Add("");
             //
-            A5 = "";
+            Xlsx.Add("");
             //
             Console.Write("Model:" + "     ");
-            B1 = Info.information("Win32_VideoController", "Name");
+            Xlsx.Add(Info.information("Win32_VideoController", "Name"));
             //
-            B2 = "";
+            Xlsx.Add("");
             //
-            B3 = "";
+            Xlsx.Add("");
             //
-            B4 = "";
+            Xlsx.Add("");
             //
-            B5 = "";
-
-            Save();
+            Xlsx.Add("");
         }
 
 
@@ -119,32 +105,30 @@ namespace ConsoleApp1
         {
             Console.Clear();
 
-            A1 = "Win32_ComputerSystem";
+            Xlsx.Add("TotalPhysicalMemory:");
             //
-            A2 = "NumberOfProcessors:";
+            Xlsx.Add("NumberOfProcessors:");
             //
-            A3 = "Capacity:";
+            Xlsx.Add("Capacity:");
             //
-            A4 = "MemoryType:";
+            Xlsx.Add("MemoryType:");
             //
-            A5 = "Frequency";
+            Xlsx.Add("Frequency");
             //
             Console.Write("TotalPhysicalMemory:" + "       ");
-            B1 = Info.information("Win32_ComputerSystem", "TotalPhysicalMemory");
+            Xlsx.Add(Info.information("Win32_ComputerSystem", "TotalPhysicalMemory"));
             //
             Console.Write("\nNumberOfProcessors:" + "        ");
-            B2 = Info.information("Win32_ComputerSystem", "NumberOfProcessors");
+            Xlsx.Add(Info.information("Win32_ComputerSystem", "NumberOfProcessors"));
             //
             Console.Write("\nCapacity:" + "     " + "\n");
-            B3 = Info.information("Win32_PhysicalMemory", "Capacity");
+            Xlsx.Add(Info.information("Win32_PhysicalMemory", "Capacity"));
             //
             Console.Write("\nMemoryType:" + "     " + "\n");
-            B4 = Info.information("Win32_PhysicalMemory", "MemoryType");
+            Xlsx.Add(Info.information("Win32_PhysicalMemory", "MemoryType"));
             //
             Console.Write("\nFrequency:" + "     " + "\n");
-            B5 = Info.information("Win32_PhysicalMemory", "Speed");
-
-            Save();
+            Xlsx.Add(Info.information("Win32_PhysicalMemory", "Speed"));
         }
 
 
@@ -152,65 +136,35 @@ namespace ConsoleApp1
         {
             Console.Clear();
 
-            A1 = "Name:";
+            Xlsx.Add("Name:");
             //
-            A2 = "Model:";
+            Xlsx.Add("Model:");
             //
-            A3 = "Size:";
+            Xlsx.Add("Size:");
             //
-            A4 = "";
+            Xlsx.Add("");
             //
-            A5 = "";
+            Xlsx.Add("");
             //
             Console.Write("Name:\n");
-            B1 = Info.information("Win32_DiskDrive", "Name");
+            Xlsx.Add(Info.information("Win32_DiskDrive", "Name"));
             //
             Console.Write("\nModel:\n");
-            B2 = Info.information("Win32_DiskDrive", "Caption");
+            Xlsx.Add(Info.information("Win32_DiskDrive", "Caption"));
             //
             Console.Write("\nSize:\n");
-            B3 = Info.information("Win32_DiskDrive", "BytesPerSector");
+            Xlsx.Add(Info.information("Win32_DiskDrive", "BytesPerSector"));
             //
-            B4 = "";
+            Xlsx.Add("");
             //
-            B5 = "";
-
-            Save();
+            Xlsx.Add("");
         }
 
-        void Save()
+
+        public void Exsel()
         {
-            try
-            {
-                Console.WriteLine("\nDo you want to save the file in Excel?        Y=Yes          N=No  ");
-
-                var E = Console.ReadKey();
-                if (E.Key == ConsoleKey.Y)
-                {
-                    xlsx save = new xlsx();
-                    save.excel(A1,A2,A3,A4,A5,B1,B2,B3,B4,B5);
-                }
-
-
-
-                else if (E.Key == ConsoleKey.N)
-                {
-                    
-                }
-
-
-
-                else
-                {
-                    Console.WriteLine("\nnot available in the list!");
-                    Save();
-                }
-            }
-            catch
-            {
-
-            }
-        }
-
+            Xlsx save = new Xlsx();
+            save.excel(Xlsx);
+        } 
     }
 }

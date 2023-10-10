@@ -20,7 +20,6 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            SystemInfo SystemInfo = new SystemInfo();
 
 
             Console.WriteLine(" * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" +
@@ -37,8 +36,11 @@ namespace ConsoleApp1
                              "\n *                                                                                                                   *" +
                              "\n *                                                                                                                   *" +
                              "\n * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" );
-            
 
+
+
+            SystemInfo SystemInfo = new SystemInfo();
+            
             try
             {
                 int number = int.Parse(Console.ReadLine());
@@ -46,7 +48,7 @@ namespace ConsoleApp1
                 if (number == 1)
                 {
                     SystemInfo.System();
-                    Question();
+                    Save();
                 }
 
 
@@ -54,7 +56,7 @@ namespace ConsoleApp1
                 else if (number == 2)
                 {
                     SystemInfo.CPU();
-                    Question();
+                    Save();
                 }
 
 
@@ -62,7 +64,7 @@ namespace ConsoleApp1
                 else if (number == 3)
                 {
                     SystemInfo.GPU();
-                    Question();
+                    Save();
                 }
 
 
@@ -70,7 +72,7 @@ namespace ConsoleApp1
                 else if (number == 4)
                 {
                     SystemInfo.RAM();
-                    Question();
+                    Save();
                 }
 
 
@@ -78,7 +80,7 @@ namespace ConsoleApp1
                 else if (number == 5)
                 {
                     SystemInfo.Hard();
-                    Question();
+                    Save();
                 }
 
 
@@ -118,7 +120,40 @@ namespace ConsoleApp1
             }
 
 
-           
+
+            void Save()
+            {
+                try
+                {
+                    Console.WriteLine("\nDo you want to save the file in Excel?        Y=Yes          N=No  ");
+
+                    var E = Console.ReadKey();
+                    if (E.Key == ConsoleKey.Y)
+                    {
+                      SystemInfo.Exsel();
+                        Question();
+                    }
+
+
+
+                    else if (E.Key == ConsoleKey.N)
+                    {
+                        Question();
+                    }
+
+
+
+                    else
+                    {
+                        Console.WriteLine("\nnot available in the list!");
+                        Save();
+                    }
+                }
+                catch
+                {
+
+                }
+            }
 
             void Question()
             {
