@@ -40,13 +40,14 @@ namespace ConsoleApp1
 
 
             SystemInfo SystemInfo = new SystemInfo();
-            
+            List<string> Xlsx = new List<string>();
+
             try
             {
                 int number = int.Parse(Console.ReadLine());
 
                 if (number == 1)
-                {
+                {                    
                     SystemInfo.System();
                     Save();
                 }
@@ -130,7 +131,7 @@ namespace ConsoleApp1
                     var E = Console.ReadKey();
                     if (E.Key == ConsoleKey.Y)
                     {
-                      SystemInfo.Exsel();
+                        SystemInfo.Xlxs();
                         Question();
                     }
 

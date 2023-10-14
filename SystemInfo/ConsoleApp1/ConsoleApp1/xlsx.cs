@@ -16,7 +16,7 @@ namespace ConsoleApp1
 {
     public class Xlsx
     {
-        public void excel(List<string> Save)
+        public void SaveExcel(List<string> Save)
         {
             try
             {

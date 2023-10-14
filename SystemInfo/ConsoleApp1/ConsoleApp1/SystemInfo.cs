@@ -33,7 +33,7 @@ namespace ConsoleApp1
             Xlsx.Add(Info.information("Win32_ComputerSystem", "Model"));
             //  
             Console.Write("PC Name:" + "             ");
-            Xlsx.Add(Info.information("Win32_ComputerSystem", "Name"));
+            Xlsx.Add (Info.information("Win32_ComputerSystem", "Name"));
             //
             Console.Write("Manufacturer:" + "        ");
             Xlsx.Add(Info.information("Win32_ComputerSystem", "Manufacturer"));
@@ -160,11 +160,10 @@ namespace ConsoleApp1
             Xlsx.Add("");
         }
 
-
-        public void Exsel()
+        public void Xlxs()
         {
             Xlsx save = new Xlsx();
-            save.excel(Xlsx);
-        } 
-    }
+            save.SaveExcel(Xlsx);
+        }
+    }   
 }
