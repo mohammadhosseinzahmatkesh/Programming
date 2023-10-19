@@ -23,6 +23,7 @@ namespace ConsoleApp1
         {
             SystemInfo SystemInfo = new SystemInfo();
 
+
             try
             {
                 Console.WriteLine("start\n");
