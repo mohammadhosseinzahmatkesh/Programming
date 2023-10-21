@@ -62,3 +62,17 @@ C:\Users\AsusIran\Desktop\SystemInfo\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleAp
 C:\Users\AsusIran\Desktop\SystemInfo\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
 C:\Users\AsusIran\Desktop\SystemInfo\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\Users\AsusIran\Desktop\SystemInfo\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\bin\Debug\Bytescout.Spreadsheet.dll
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\bin\Debug\DocumentFormat.OpenXml.dll
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\bin\Debug\Bytescout.Spreadsheet.xml
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\bin\Debug\DocumentFormat.OpenXml.xml
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+E:\Sarvi\System Info\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

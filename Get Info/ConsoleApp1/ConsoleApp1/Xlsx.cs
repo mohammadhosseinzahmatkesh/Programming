@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Management;
 using System.IO;
 using Worksheet = Bytescout.Spreadsheet.Worksheet;
-using System.Management;
 using Bytescout.Spreadsheet;
 
 namespace ConsoleApp1
@@ -27,23 +26,23 @@ namespace ConsoleApp1
                 sheet.Cell("B1").Value = Save[2];
                 sheet.Cell("B2").Value = Save[3];
                 sheet.Cell("C1").Value = Save[4];
-                sheet.Cell("C2").Value = Save[5];
+                sheet.Cell("C2").Value = Save[5] + "MHz";
                 sheet.Cell("D1").Value = Save[6];
                 sheet.Cell("D2").Value = Save[7];
                 sheet.Cell("E1").Value = Save[8];
-                sheet.Cell("E2").Value = Save[9];
+                sheet.Cell("E2").Value = Save[9] + "MHz"; 
                 sheet.Cell("F1").Value = Save[10];
                 sheet.Cell("F2").Value = Save[11];
                 sheet.Cell("G1").Value = Save[12];
-                sheet.Cell("G2").Value = Save[13];
-                sheet.Cell("H1").Value = Save[14];
-                sheet.Cell("H2").Value = Save[15];
-
+                sheet.Cell("G2").Value = Save[13] + "GB" + Save[14]+ "GB";
+                sheet.Cell("H1").Value = Save[15];
+                sheet.Cell("H2").Value = Save[16];
 
                 if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"/" + "SystemInfo.xlsx"))
                 {
                     File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"/" + "SystemInfo.xlsx");
                 }
+
                 document.SaveAs(AppDomain.CurrentDomain.BaseDirectory + @"/" + "SystemInfo.xlsx");
                 document.Close();
             }

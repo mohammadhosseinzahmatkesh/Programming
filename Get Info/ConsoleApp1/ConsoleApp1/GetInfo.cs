@@ -15,6 +15,7 @@ namespace ConsoleApp1
             try
             {
                 ManagementObjectSearcher mos = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM " + hwclass);
+
                 foreach (ManagementObject mj in mos.Get())
                 {
                     info = Convert.ToString(mj[syntex]);
@@ -25,6 +26,7 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(Erorr.Message);
             }
+
             return info;
         }
     }

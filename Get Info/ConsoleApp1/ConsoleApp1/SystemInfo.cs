@@ -13,22 +13,129 @@ namespace ConsoleApp1
 {
     public class SystemInfo
     {
-        CPU GetCPU = new CPU();
-        RAM GetRAM = new RAM();
-        GPU GetGPU = new GPU();
-        Hard GetHard = new Hard();
-
         public List<string> List = new List<string>();
 
         public void GetInfo()
         {
-            GetCPU.GetCPU(List);
+            GetCPU(List);
             //
-            GetRAM.GetRAM(List);
+            GetRAM(List);
             //
-            GetHard.GetHard(List);
+            GetHard(List);
             //
-            GetGPU.GetCPU(List);
+            GetGPU(List);
+        }
+
+
+
+        private List<string> GetCPU(List<string> List1)
+        {
+            GetInfo Info = new GetInfo();
+
+            string CPU = (Info.information("Win32_Processor", "Name"));
+
+            string[] Split = CPU.Split(' ');
+
+            bool test1 = CPU.Contains("Intel");
+            bool test2 = CPU.Contains("Ryzen");
+
+
+            if (test1 == true)
+            {
+                List1.Add("Processor");
+                //
+                List1.Add(Split[1]);
+                //
+                List1.Add("Processor generation");
+                //
+                List1.Add(Split[2]);
+                //
+                List1.Add("Frequency CPU:");
+                //
+                List1.Add(Split[5]);
+            }
+
+            else if (test2 == true)
+            {
+                List1.Add("Processor");
+                //
+                List1.Add(Split[2]);
+                //
+                List1.Add("Processor generation");
+                //
+                List1.Add(Split[3]);
+                //
+                List1.Add("Frequency CPU:");
+                //
+                List1.Add(Info.information("Win32_Processor", "MaxClockSpeed"));
+            }
+
+            else
+            {
+                List1.Add("Model");
+                //
+                List1.Add(Info.information("Win32_Processor", "Name"));
+                //
+                List1.Add("");
+                //
+                List1.Add("");
+                //
+                List1.Add("Frequency CPU:");
+                //
+                List1.Add(Info.information("Win32_Processor", "MaxClockSpeed"));
+            }
+
+            return List1;
+        }
+
+
+
+        private List<string> GetRAM(List<string> List2)
+        {
+            GetInfo Info = new GetInfo();
+
+
+            List2.Add("TotalPhysicalMemory:");
+            //
+            List2.Add(Info.information("Win32_ComputerSystem", "TotalPhysicalMemory"));
+            //
+            List2.Add("Frequency Memory");
+            //                  
+            List2.Add(Info.information("Win32_PhysicalMemory", "Speed"));
+
+            return List2;
+        }
+
+
+
+        private List<string> GetHard(List<string> List3)
+        {
+            GetInfo Info = new GetInfo();
+
+
+            List3.Add("Model DiskHard:");
+            //
+            List3.Add(Info.information("Win32_DiskDrive", "Caption"));
+            //
+            List3.Add("Size DiskHard:");
+            //
+            List3.Add(Info.information("Win32_DiskDrive", "BytesPerSector"));
+
+            return List3;
+        }
+
+
+
+        private List<string> GetGPU(List<string> List4)
+        {
+            GetInfo Info = new GetInfo();
+
+
+            List4.Add("Model GPU:");
+            //
+            List4.Add(Info.information("Win32_VideoController", "Name"));
+
+            return List4;
         }
     }   
 }
