@@ -14,6 +14,7 @@ namespace ConsoleApp1
     public class SystemInfo
     {
         public List<string> List = new List<string>();
+        GetInfo Info = new GetInfo();
 
         public void GetInfo()
         {
@@ -30,8 +31,6 @@ namespace ConsoleApp1
 
         private List<string> GetCPU(List<string> List1)
         {
-            GetInfo Info = new GetInfo();
-
             string CPU = (Info.information("Win32_Processor", "Name"));
 
             string[] Split = CPU.Split(' ');
@@ -57,11 +56,11 @@ namespace ConsoleApp1
 
             else if (test2 == true)
             {
-                List1.Add("Processor");
+                List1.Add("Processor:");
                 //
                 List1.Add(Split[2]);
                 //
-                List1.Add("Processor generation");
+                List1.Add("Processor generation:");
                 //
                 List1.Add(Split[3]);
                 //
@@ -92,9 +91,6 @@ namespace ConsoleApp1
 
         private List<string> GetRAM(List<string> List2)
         {
-            GetInfo Info = new GetInfo();
-
-
             List2.Add("TotalPhysicalMemory:");
             //
             List2.Add(Info.information("Win32_ComputerSystem", "TotalPhysicalMemory"));
@@ -110,16 +106,20 @@ namespace ConsoleApp1
 
         private List<string> GetHard(List<string> List3)
         {
-            GetInfo Info = new GetInfo();
-
-
             List3.Add("Model DiskHard:");
             //
             List3.Add(Info.information("Win32_DiskDrive", "Caption"));
             //
-            List3.Add("Size DiskHard:");
+            string Size = (Info.information("Win32_DiskDrive", "BytesPerSector")) + (" ") + ("DoesNotExist");
+            string[] Split = Size.Split(' ');
             //
-            List3.Add(Info.information("Win32_DiskDrive", "BytesPerSector"));
+            List3.Add("Size DiskHard1:");
+            //
+            List.Add(Split[0]);
+            //
+            List3.Add("Size DiskHard2:");
+            //
+            List.Add(Split[1]);
 
             return List3;
         }
@@ -128,8 +128,6 @@ namespace ConsoleApp1
 
         private List<string> GetGPU(List<string> List4)
         {
-            GetInfo Info = new GetInfo();
-
 
             List4.Add("Model GPU:");
             //

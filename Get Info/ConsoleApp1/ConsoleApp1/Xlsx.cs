@@ -34,9 +34,11 @@ namespace ConsoleApp1
                 sheet.Cell("F1").Value = Save[10];
                 sheet.Cell("F2").Value = Save[11];
                 sheet.Cell("G1").Value = Save[12];
-                sheet.Cell("G2").Value = Save[13] + "GB" + Save[14]+ "GB";
-                sheet.Cell("H1").Value = Save[15];
-                sheet.Cell("H2").Value = Save[16];
+                sheet.Cell("G2").Value = Save[13] + "GB";
+                sheet.Cell("H1").Value = Save[14];
+                sheet.Cell("H2").Value = Save[15];
+                sheet.Cell("I1").Value = Save[16];
+                sheet.Cell("I2").Value = Save[17];
 
                 if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"/" + "SystemInfo.xlsx"))
                 {
