@@ -1,0 +1,8 @@
+E:\Git Hub\Programming\Switch\Switch\bin\Debug\Switch.exe.config
+E:\Git Hub\Programming\Switch\Switch\bin\Debug\Switch.exe
+E:\Git Hub\Programming\Switch\Switch\bin\Debug\Switch.pdb
+E:\Git Hub\Programming\Switch\Switch\obj\Debug\Switch.csproj.AssemblyReference.cache
+E:\Git Hub\Programming\Switch\Switch\obj\Debug\Switch.csproj.SuggestedBindingRedirects.cache
+E:\Git Hub\Programming\Switch\Switch\obj\Debug\Switch.csproj.CoreCompileInputs.cache
+E:\Git Hub\Programming\Switch\Switch\obj\Debug\Switch.exe
+E:\Git Hub\Programming\Switch\Switch\obj\Debug\Switch.pdb

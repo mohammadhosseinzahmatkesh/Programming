@@ -1,0 +1,8 @@
+E:\Git Hub\Programming\Class\Inheritance\Inheritance\obj\Debug\Inheritance.csproj.AssemblyReference.cache
+E:\Git Hub\Programming\Class\Inheritance\Inheritance\obj\Debug\Inheritance.csproj.SuggestedBindingRedirects.cache
+E:\Git Hub\Programming\Class\Inheritance\Inheritance\obj\Debug\Inheritance.csproj.CoreCompileInputs.cache
+E:\Git Hub\Programming\Class\Inheritance\Inheritance\bin\Debug\Inheritance.exe.config
+E:\Git Hub\Programming\Class\Inheritance\Inheritance\bin\Debug\Inheritance.exe
+E:\Git Hub\Programming\Class\Inheritance\Inheritance\bin\Debug\Inheritance.pdb
+E:\Git Hub\Programming\Class\Inheritance\Inheritance\obj\Debug\Inheritance.exe
+E:\Git Hub\Programming\Class\Inheritance\Inheritance\obj\Debug\Inheritance.pdb

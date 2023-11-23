@@ -1,0 +1,184 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="525" Width="350">
+
+    
+    <Grid Margin = "10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "2*"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+        </Grid.RowDefinitions>
+
+
+        <Label x:Name = "BackLable"
+               Content = "0"
+               HorizontalAlignment = "Right"
+               VerticalAlignment = "Bottom"
+               Grid.ColumnSpan = "4"
+               FontSize = "30"/>
+        
+        <Label x:Name = "ResultLable"
+               Content = "0."
+               HorizontalAlignment = "Right"
+               VerticalAlignment = "Bottom"
+               Grid.Row = "1"
+               Grid.ColumnSpan = "4"
+               FontSize = "70"/>
+
+        <Button x:Name = "AcButton"
+                Click = "AcButton_Click"
+                Foreground = "Black"
+                Content = "AC"
+                Grid.Row = "2"/>
+
+        <Button x:Name = "NegativButton"
+                Click="NegativButton_Click"
+                Foreground = "Black"
+                Content = "+/-"
+                Grid.Row = "2"
+                Grid.Column = "1"/>
+
+        <Button x:Name = "PercentageButton"
+                Click = "PercentageButton_Click"
+                Foreground = "Black"
+                Content = "%"
+                Grid.Row = "2"
+                Grid.Column = "2"/>
+
+        <Button x:Name = "DivisionButton"
+                Click = "OperationButton_Click"
+                Background = "{StaticResource Orange}"
+                Foreground = "White"
+                Content = "/"
+                Grid.Row = "2"
+                Grid.Column = "4"/>
+
+        <Button x:Name = "SevenButton"
+                Click = "NumberButtom_Click"
+                Background = "{StaticResource Black}"
+                Content = "7"
+                Grid.Row = "3"
+                Grid.Column = "0"/>
+
+        <Button x:Name = "EightButton"
+                Click = "NumberButtom_Click"
+                Background = "{StaticResource Black}"
+                Content = "8"
+                Grid.Row = "3"
+                Grid.Column = "1"/>
+
+        <Button x:Name = "NinetButton"
+                Click = "NumberButtom_Click"
+                Background = "{StaticResource Black}"
+                Content = "9"
+                Grid.Row = "3"
+                Grid.Column = "2"/>
+
+        <Button x:Name = "MultiplyButton"
+                Click = "OperationButton_Click"
+                Background = "{StaticResource Orange}"
+                Foreground = "White"
+                Content = "*"
+                Grid.Row = "3"
+                Grid.Column = "4"/>
+
+        <Button x:Name = "FourButton"
+                Click = "NumberButtom_Click"
+                Background = "{StaticResource Black}"
+                Content = "4"
+                Grid.Row = "4"
+                Grid.Column = "0"/>
+
+        <Button x:Name = "FiveButton"
+                Click = "NumberButtom_Click"
+                Background = "{StaticResource Black}"
+                Content = "5"
+                Grid.Row = "4"
+                Grid.Column = "1"/>
+
+        <Button x:Name = "SixButton"
+                Click = "NumberButtom_Click"
+                Background = "{StaticResource Black}"
+                Content = "6"
+                Grid.Row = "4"
+                Grid.Column = "2"/>
+
+        <Button x:Name = "MinusButton"
+                Click = "OperationButton_Click"
+                Background = "{StaticResource Orange}"
+                Foreground = "White"
+                Content = "-"
+                Grid.Row = "4"
+                Grid.Column = "4"/>
+
+
+        <Button x:Name = "OneButton"
+                Click = "NumberButtom_Click"
+                Background = "{StaticResource Black}"
+                Content = "1"
+                Grid.Row = "5"
+                Grid.Column = "0"/>
+
+        <Button x:Name = "TwoButton"
+                Click = "NumberButtom_Click"
+                Background = "{StaticResource Black}"
+                Content = "2"
+                Grid.Row = "5"
+                Grid.Column = "1"/>
+
+        <Button x:Name = "ThreeButton"
+                Click = "NumberButtom_Click"
+                Background = "{StaticResource Black}"
+                Content = "3"
+                Grid.Row = "5"
+                Grid.Column = "2"/>
+
+        <Button x:Name = "PlusButton"
+                Click = "OperationButton_Click"
+                Background = "{StaticResource Orange}"
+                Foreground = "White"
+                Content = "+"
+                Grid.Row = "5"
+                Grid.Column = "3"/>
+
+        <Button x:Name = "ZeroButton"
+                Click = "NumberButtom_Click"
+                Background = "{StaticResource Black}"
+                Content = "0"
+                Grid.Row = "6"
+                Grid.ColumnSpan = "2"/>
+
+        <Button x:Name = "DotButton"
+                Click = "DotButton_Click"
+                Background = "{StaticResource Black}"
+                Content = "."
+                Grid.Row = "6"
+                Grid.Column = "2"/>
+
+        <Button x:Name = "EqualButton"
+                Click = "EqualButton_Click"
+                Background = "{StaticResource Orange}"
+                Foreground = "White"
+                Content = "="
+                Grid.Row = "6"
+                Grid.Column = "3"/>
+
+    </Grid>
+</Window>

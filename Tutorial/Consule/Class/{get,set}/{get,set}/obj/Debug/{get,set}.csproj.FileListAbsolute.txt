@@ -1,0 +1,8 @@
+E:\Git Hub\Programming\Class\{get,set}\{get,set}\bin\Debug\{get,set}.exe.config
+E:\Git Hub\Programming\Class\{get,set}\{get,set}\bin\Debug\{get,set}.exe
+E:\Git Hub\Programming\Class\{get,set}\{get,set}\bin\Debug\{get,set}.pdb
+E:\Git Hub\Programming\Class\{get,set}\{get,set}\obj\Debug\{get,set}.csproj.AssemblyReference.cache
+E:\Git Hub\Programming\Class\{get,set}\{get,set}\obj\Debug\{get,set}.csproj.SuggestedBindingRedirects.cache
+E:\Git Hub\Programming\Class\{get,set}\{get,set}\obj\Debug\{get,set}.csproj.CoreCompileInputs.cache
+E:\Git Hub\Programming\Class\{get,set}\{get,set}\obj\Debug\{get,set}.exe
+E:\Git Hub\Programming\Class\{get,set}\{get,set}\obj\Debug\{get,set}.pdb

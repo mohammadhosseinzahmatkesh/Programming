@@ -1,0 +1,8 @@
+E:\Git Hub\Programming\Class\Enums\Enums\bin\Debug\Enums.exe.config
+E:\Git Hub\Programming\Class\Enums\Enums\bin\Debug\Enums.exe
+E:\Git Hub\Programming\Class\Enums\Enums\bin\Debug\Enums.pdb
+E:\Git Hub\Programming\Class\Enums\Enums\obj\Debug\Enums.csproj.AssemblyReference.cache
+E:\Git Hub\Programming\Class\Enums\Enums\obj\Debug\Enums.csproj.SuggestedBindingRedirects.cache
+E:\Git Hub\Programming\Class\Enums\Enums\obj\Debug\Enums.csproj.CoreCompileInputs.cache
+E:\Git Hub\Programming\Class\Enums\Enums\obj\Debug\Enums.exe
+E:\Git Hub\Programming\Class\Enums\Enums\obj\Debug\Enums.pdb

@@ -1,0 +1,8 @@
+E:\Git Hub\Programming\Class\Abstract Classes\Abstract Classes\obj\Debug\Abstract Classes.csproj.AssemblyReference.cache
+E:\Git Hub\Programming\Class\Abstract Classes\Abstract Classes\obj\Debug\Abstract Classes.csproj.SuggestedBindingRedirects.cache
+E:\Git Hub\Programming\Class\Abstract Classes\Abstract Classes\obj\Debug\Abstract Classes.csproj.CoreCompileInputs.cache
+E:\Git Hub\Programming\Class\Abstract Classes\Abstract Classes\bin\Debug\Abstract Classes.exe.config
+E:\Git Hub\Programming\Class\Abstract Classes\Abstract Classes\bin\Debug\Abstract Classes.exe
+E:\Git Hub\Programming\Class\Abstract Classes\Abstract Classes\bin\Debug\Abstract Classes.pdb
+E:\Git Hub\Programming\Class\Abstract Classes\Abstract Classes\obj\Debug\Abstract Classes.exe
+E:\Git Hub\Programming\Class\Abstract Classes\Abstract Classes\obj\Debug\Abstract Classes.pdb
